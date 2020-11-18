@@ -71,6 +71,7 @@ jobs:
     - name: Tar the reduction package
       run: |
         ls build/VSANSPolReduce
+        ls /System/Library/Frameworks/
         tar -zcvf dist_osx.tar.gz build/VSANSPolReduce/
       shell: bash
 
