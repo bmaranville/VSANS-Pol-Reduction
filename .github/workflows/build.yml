@@ -65,7 +65,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -U https://github.com/pyinstaller/pyinstaller/archive/develop.zip
         pip install --no-warn-script-location numpy scipy matplotlib h5py requests
-        pyinstaller --add-binary='/System/Library/Frameworks/Tk.framework/Tk':'tk' --add-binary='/System/Library/Frameworks/Tcl.framework/Tcl':'tcl' --name VSANSPolReduce VSANS_ReductionHighRes.py
+        pyinstaller --onefile --add-binary='/System/Library/Frameworks/Tk.framework/Tk':'tk' --add-binary='/System/Library/Frameworks/Tcl.framework/Tcl':'tcl' --name VSANSPolReduce VSANS_ReductionHighRes.py
         pyinstaller --onefile --name get_ncnr_files get_ncnr_files.py
 
     - name: Tar the reduction package
